@@ -20,7 +20,7 @@
 
   const props = defineProps({
     errors: Array,
-  })
+  });
 </script>
 
 <style module>

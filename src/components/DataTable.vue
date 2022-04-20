@@ -54,13 +54,13 @@
 </template>
 
 <script setup>
-  import { defineProps, defineEmits } from 'vue'
+  import { defineProps, defineEmits } from 'vue';
 
-  const emit = defineEmits(['sort'])
+  const emit = defineEmits(['sort']);
 
   const props = defineProps({
     rowData: Array,
-  })
+  });
 </script>
 
 <style module>

@@ -21,11 +21,11 @@
 <script setup>
   import { defineProps, defineEmits, ref } from 'vue';
 
-  const emit = defineEmits(['change'])
+  const emit = defineEmits(['change']);
 
   const props = defineProps({
     pagesCount: Number,
-  })
+  });
 
   const page = ref(1);
 

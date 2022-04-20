@@ -8,8 +8,7 @@
             :class="$style.input"
             id="count"
             name="count"
-            class="form-control"
-            type="number"/>
+            class="form-control"/>
 
         <UIError :errors="v$.count.$errors"/>
       </div>
@@ -22,7 +21,6 @@
             id="countOnPage"
             name="countOnPage"
             class="form-control"
-            type="number"
             required/>
 
         <UIError :errors="v$.countOnPage.$errors"/>
@@ -55,9 +53,9 @@
 
   <script setup>
   import UIError from '@/components/UIError.vue';
-  import useVuelidate from '@vuelidate/core'
-  import { required, numeric } from '@vuelidate/validators'
-  import { defineEmits, reactive } from 'vue'
+  import useVuelidate from '@vuelidate/core';
+  import { required, numeric } from '@vuelidate/validators';
+  import { defineEmits, reactive } from 'vue';
 
   const emit = defineEmits(['create']);
 
@@ -81,7 +79,7 @@
     countOnPage: { required, numeric },
   }
 
-  const v$ = useVuelidate(rules, state, { $lazy: true })
+  const v$ = useVuelidate(rules, state, { $lazy: true });
 
   const onSubmit = async () => {
     await v$.value.$validate()
